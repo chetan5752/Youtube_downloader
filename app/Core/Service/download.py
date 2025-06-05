@@ -22,7 +22,7 @@ QUALITY_MAP = {
 # Set base download directory to the user's Downloads folder
 # BASE_DOWNLOAD_DIR = os.path.expanduser("~/Downloads")
 # os.makedirs(BASE_DOWNLOAD_DIR, exist_ok=True)
-BASE_DOWNLOAD_DIR = '/home/chetan/Downloads'  # Host machine Downloads folder
+BASE_DOWNLOAD_DIR = r"C:\Users\cheta\Downloads"  # Host machine Downloads folder
 os.makedirs(BASE_DOWNLOAD_DIR, exist_ok=True)
 
 
