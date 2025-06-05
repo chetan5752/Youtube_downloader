@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.Router import create_user, post,user_login
+from app.Router import create_user, post, user_login
 from app.Database.models.model import Base
 from .Database.database import engine
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 Base.metadata.create_all(bind=engine)
 
 # Create an instance of the FastAPI application
-app=FastAPI()
+app = FastAPI()
 
 # List of allowed origins for CORS (Cross-Origin Resource Sharing)
 origins = [
@@ -25,12 +25,11 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
+
 @app.get("/")
 def root():
-    return {
-        "message": "Welcome to the YouTube Downloader API",
-        "status": "Running"
-    }
+    return {"message": "Welcome to the YouTube Downloader API", "status": "Running"}
+
 
 # Include the routers for different routes of the application
 app.include_router(post.router)
